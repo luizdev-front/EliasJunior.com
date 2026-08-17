@@ -3,213 +3,685 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Elias Júnior | Landing Page</title>
-  <meta name="description" content="Landing page institucional de Elias Júnior." />
+
+  <meta
+    name="description"
+    content="Landing page institucional de Elias Júnior."
+  />
+
+  <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --navy:#07192f;
-      --navy-2:#0a2342;
-      --ink:#13151a;
-      --muted:#6b7280;
-      --gold:#c99a4b;
-      --paper:#f8f7f3;
-      --white:#ffffff;
-      --line:#e8e5df;
-      --shadow:0 25px 70px rgba(4,20,38,.16);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
 
-    .nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s;background:linear-gradient(to bottom,rgba(3,15,29,.65),transparent)}
-    .nav.scrolled{background:rgba(7,25,47,.92);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.12)}
-    .nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;color:#fff}
-    .brand{font-family:"Playfair Display",serif;font-size:1.35rem;font-weight:600;letter-spacing:.02em}
-    .menu{display:flex;gap:30px;align-items:center;font-size:.9rem}
-    .menu a{opacity:.82;transition:.2s}.menu a:hover{opacity:1;color:#e7c687}
-    .nav-cta{border:1px solid rgba(255,255,255,.45);padding:10px 17px;border-radius:999px}
-    .mobile-toggle{display:none;background:none;border:0;color:#fff;font-size:1.6rem}
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-    .hero{min-height:100vh;display:grid;place-items:center;position:relative;color:#fff;background:
-      linear-gradient(90deg,rgba(2,13,26,.92) 0%,rgba(4,19,37,.72) 48%,rgba(2,15,30,.88) 100%),
-      radial-gradient(circle at 75% 25%,rgba(39,91,139,.28),transparent 34%),
-      #07192f;overflow:hidden}
-    .hero::after{content:"";position:absolute;inset:auto -10% -28% 40%;height:70%;background:radial-gradient(circle,rgba(93,145,205,.20),transparent 68%);filter:blur(20px)}
-    .hero-photo-placeholder{position:absolute;inset:0;opacity:.25;background:
-      linear-gradient(110deg,transparent 0 55%,rgba(255,255,255,.05) 55% 56%,transparent 56%),
-      radial-gradient(ellipse at 28% 52%,rgba(255,255,255,.08),transparent 22%)}
-    .hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:120px 0 60px}
-    .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.76rem;font-weight:700;color:#d8b56b;margin-bottom:18px}
-    h1{font-family:"Playfair Display",serif;font-size:clamp(3.4rem,8vw,7.4rem);line-height:.92;font-weight:600;letter-spacing:-.035em}
-    .hero-sub{font-family:"Playfair Display",serif;font-size:clamp(1.05rem,2vw,1.5rem);font-style:italic;color:#f2e7d0;margin:24px auto 18px}
-    .hero-desc{max-width:700px;margin:0 auto;color:rgba(255,255,255,.72);font-size:.95rem}
-    .hero-actions{display:flex;justify-content:center;gap:14px;margin-top:34px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:.92rem;transition:.25s}
-    .btn-gold{background:var(--gold);color:#07192f}.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.05)}
-    .btn-outline{border:1px solid rgba(255,255,255,.42);color:#fff}.btn-outline:hover{background:rgba(255,255,255,.08)}
-    .scroll-note{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-    section{position:relative}
-    .quote-section{padding:120px 0 80px;background:#fff;text-align:center}
-    .quote{font-family:"Playfair Display",serif;font-size:clamp(1.65rem,3.4vw,3rem);line-height:1.32;max-width:980px;margin:0 auto;color:#20252b}
-    .quote::before{content:"“";display:block;color:var(--gold);font-size:4rem;line-height:.5;margin-bottom:20px}
-
-    .timeline-section{padding:40px 0 120px;background:#fff}
-    .section-title{font-family:"Playfair Display",serif;font-size:clamp(2.2rem,4vw,4rem);line-height:1.08;margin-bottom:18px}
-    .section-lead{color:var(--muted);max-width:690px}
-    .timeline-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:start;margin-top:58px}
-    .timeline{position:relative;padding-left:30px}
-    .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:#d6d2cb}
-    .t-item{position:relative;padding:0 0 34px 26px}
-    .t-item::before{content:"";position:absolute;left:-29px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 7px #f7f0e4}
-    .t-year{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:700}
-    .t-item h3{font-family:"Playfair Display",serif;font-size:1.35rem;margin:3px 0 4px}
-    .t-item p{color:var(--muted);font-size:.92rem}
-    .portrait-card{position:sticky;top:120px;background:linear-gradient(145deg,#d8d8d3,#faf9f6);min-height:560px;border-radius:3px;box-shadow:var(--shadow);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#7b7d80}
-    .portrait-card::after{content:"FOTO DO ELIAS";font-weight:700;letter-spacing:.18em;font-size:.78rem}
-    .portrait-badge{position:absolute;left:28px;bottom:28px;background:rgba(7,25,47,.94);color:#fff;padding:17px 20px;max-width:280px}
-    .portrait-badge strong{display:block;font-family:"Playfair Display",serif;font-size:1.35rem}
-    .portrait-badge span{display:block;color:#d6dbe3;font-size:.82rem;margin-top:4px}
-
-    .split-feature{background:var(--navy);color:#fff;display:grid;grid-template-columns:1fr 1fr;min-height:560px}
-    .split-photo{background:linear-gradient(135deg,#d8d8d3,#f1f0ec);display:grid;place-items:center;color:#7b7d80;letter-spacing:.15em;font-size:.78rem;font-weight:700;min-height:520px}
-    .split-copy{display:flex;align-items:center;padding:70px 8vw}
-    .split-copy .section-title{color:#fff}.split-copy p{color:#c2cad4;margin-top:18px;max-width:580px}.gold-link{display:inline-flex;margin-top:24px;color:#e2bd77;font-weight:600}
-
-    .zpe{padding:125px 0;background:#fff}
-    .zpe-grid{display:grid;grid-template-columns:1.1fr .7fr;gap:100px;align-items:center}
-    .zpe-copy p{color:var(--muted);margin-top:16px;max-width:700px}
-    .zpe-card{position:relative;width:min(340px,100%);justify-self:center;aspect-ratio:9/16;border-radius:18px;background:linear-gradient(145deg,#d7d7d2,#f9f8f5);box-shadow:0 30px 65px rgba(6,22,41,.22);display:grid;place-items:center;color:#777;overflow:hidden}
-    .zpe-card::before{content:"VÍDEO / FOTO";font-size:.75rem;font-weight:700;letter-spacing:.15em}
-    .play{position:absolute;width:64px;height:64px;border-radius:50%;background:rgba(7,25,47,.92);color:#fff;display:grid;place-items:center;font-size:1.2rem;box-shadow:0 10px 35px rgba(0,0,0,.24)}
-    .zpe-note{position:absolute;bottom:24px;left:20px;right:20px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75));padding:40px 8px 10px;font-weight:600}
-
-    .stats{background:var(--navy);color:#fff;padding:85px 0}
-    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
-    .stat strong{font-family:"Playfair Display",serif;font-size:clamp(3rem,6vw,5.2rem);color:#d5aa60;line-height:1}
-    .stat span{display:block;color:#c6ced8;margin-top:9px;font-size:.92rem}
-
-    .advocacy{padding:125px 0;background:#fff}
-    .adv-grid{display:grid;grid-template-columns:1fr .9fr;gap:90px;align-items:center}
-    .adv-copy p{color:var(--muted);margin-top:16px}
-    .adv-image{min-height:540px;background:linear-gradient(145deg,#e1e1de,#fbfaf6);display:grid;place-items:center;color:#818181;letter-spacing:.15em;font-size:.78rem;font-weight:700;box-shadow:var(--shadow);border-bottom:6px solid var(--gold)}
-
-    .cta{padding:110px 0;background:#0a2342;color:#fff;text-align:center}
-    .cta h2{font-family:"Playfair Display",serif;font-size:clamp(2.3rem,5vw,4.6rem);line-height:1.05;max-width:850px;margin:0 auto}
-    .cta p{color:#bdc7d2;margin:18px auto 0;max-width:640px}
-
-    footer{background:#061426;color:#fff;padding:44px 0 26px}
-    .footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:28px}
-    .footer-brand{font-family:"Playfair Display",serif;font-size:1.55rem}.footer-muted{color:#9aa8b8;font-size:.84rem;margin-top:5px}
-    .footer-links{display:flex;gap:20px;color:#b7c2cf;font-size:.86rem;flex-wrap:wrap;justify-content:flex-end}
-    .copyright{color:#6f8092;font-size:.76rem;padding-top:20px}
-
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
-    .whatsapp{position:fixed;right:22px;bottom:22px;z-index:40;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-weight:800;box-shadow:0 12px 35px rgba(0,0,0,.25);transition:.2s}.whatsapp:hover{transform:translateY(-3px) scale(1.03)}
-
-    @media(max-width:900px){
-      .menu{display:none;position:absolute;top:82px;left:0;right:0;padding:24px 20px;background:rgba(7,25,47,.98);flex-direction:column;align-items:flex-start}.menu.open{display:flex}.mobile-toggle{display:block}
-      .timeline-wrap,.zpe-grid,.adv-grid{grid-template-columns:1fr;gap:55px}.portrait-card{position:relative;top:auto;min-height:480px}.split-feature{grid-template-columns:1fr}.split-photo{min-height:430px}.split-copy{padding:70px 34px}.stats-grid{grid-template-columns:1fr;gap:38px}.zpe-card{width:280px}.footer-top{flex-direction:column;align-items:flex-start}.footer-links{justify-content:flex-start}
-    }
-    @media(max-width:560px){.container{width:min(100% - 28px,1180px)}.hero-content{padding-top:130px}.quote-section,.zpe,.advocacy{padding:90px 0}.timeline-section{padding-bottom:90px}.hero-actions{flex-direction:column;align-items:center}.btn{width:min(290px,100%)}.portrait-card{min-height:400px}.split-photo{min-height:360px}.nav-inner{height:72px}.menu{top:72px}}
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- =========================
+       MENU
+  ========================== -->
+
   <header class="nav" id="nav">
+
     <div class="container nav-inner">
-      <a href="#inicio" class="brand">Elias Júnior</a>
+
+      <a href="#inicio" class="brand">
+        Elias Júnior
+      </a>
+
       <nav class="menu" id="menu">
-        <a href="#trajetoria">Trajetória</a><a href="#atuacao">Atuação</a><a href="#zpe">ZPE</a><a href="#advocacia">Advocacia</a><a href="#contato" class="nav-cta">Contato</a>
+
+        <a href="#trajetoria">
+          Trajetória
+        </a>
+
+        <a href="#atuacao">
+          Atuação
+        </a>
+
+        <a href="#zpe">
+          ZPE
+        </a>
+
+        <a href="#advocacia">
+          Advocacia
+        </a>
+
+        <a href="#contato" class="nav-cta">
+          Contato
+        </a>
+
       </nav>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">☰</button>
+
+      <button
+        class="mobile-toggle"
+        id="mobileToggle"
+        aria-label="Abrir menu"
+      >
+        ☰
+      </button>
+
     </div>
+
   </header>
 
+
+  <!-- =========================
+       CONTEÚDO PRINCIPAL
+  ========================== -->
+
   <main>
+
+
+    <!-- HERO -->
+
     <section class="hero" id="inicio">
+
       <div class="hero-photo-placeholder"></div>
+
       <div class="container hero-content reveal">
-        <div class="eyebrow">Trajetória • Gestão • Advocacia</div>
-        <h1>Elias Júnior</h1>
-        <div class="hero-sub">“20 anos de Advocacia, Liderança Pública e Compromisso Social”</div>
-        <p class="hero-desc">Uma trajetória construída entre o Direito, a gestão pública e o desenvolvimento regional, com presença ativa nos temas que impactam a cidade, as pessoas e o futuro.</p>
-        <div class="hero-actions"><a class="btn btn-gold" href="#trajetoria">Conheça a trajetória</a><a class="btn btn-outline" href="#contato">Fale com Elias</a></div>
+
+        <div class="eyebrow">
+          Trajetória • Gestão • Advocacia
+        </div>
+
+        <h1>
+          Elias Júnior
+        </h1>
+
+        <div class="hero-sub">
+          “20 anos de Advocacia, Liderança Pública e Compromisso Social”
+        </div>
+
+        <p class="hero-desc">
+          Uma trajetória construída entre o Direito, a gestão pública
+          e o desenvolvimento regional, com presença ativa nos temas
+          que impactam a cidade, as pessoas e o futuro.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-gold"
+            href="#trajetoria"
+          >
+            Conheça a trajetória
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="#contato"
+          >
+            Fale com Elias
+          </a>
+
+        </div>
+
       </div>
-      <div class="scroll-note">Role para conhecer</div>
+
+      <div class="scroll-note">
+        Role para conhecer
+      </div>
+
     </section>
+
+
+    <!-- FRASE DE DESTAQUE -->
 
     <section class="quote-section">
-      <div class="container reveal"><p class="quote">Da liderança jovem no associativismo à gestão de pautas estratégicas em Santos. Uma vida dedicada a construir pontes entre o setor produtivo e a justiça social.</p></div>
+
+      <div class="container reveal">
+
+        <p class="quote">
+          Da liderança jovem no associativismo à gestão de pautas
+          estratégicas em Santos. Uma vida dedicada a construir
+          pontes entre o setor produtivo e a justiça social.
+        </p>
+
+      </div>
+
     </section>
 
-    <section class="timeline-section" id="trajetoria">
+
+    <!-- TRAJETÓRIA -->
+
+    <section
+      class="timeline-section"
+      id="trajetoria"
+    >
+
       <div class="container">
-        <div class="reveal"><div class="eyebrow">Marcos da jornada</div><h2 class="section-title">Uma trajetória construída com presença e responsabilidade.</h2></div>
-        <div class="timeline-wrap">
-          <div class="timeline reveal">
-            <div class="t-item"><div class="t-year">Início</div><h3>Ouvidor Geral de Santos</h3><p>Espaço para contextualizar a função, os principais desafios e os resultados alcançados.</p></div>
-            <div class="t-item"><div class="t-year">Gestão Pública</div><h3>Secretaria Social / Casa Pró-Saúde</h3><p>Descreva aqui a atuação de Elias em programas, políticas públicas e iniciativas sociais.</p></div>
-            <div class="t-item"><div class="t-year">Desenvolvimento</div><h3>Secretário de Assuntos Portuários</h3><p>Atuação estratégica em temas relacionados ao Porto de Santos e ao desenvolvimento econômico regional.</p></div>
-            <div class="t-item"><div class="t-year">Administração</div><h3>Fundação de Assistência</h3><p>Espaço para destacar gestão, projetos, ações e impacto institucional.</p></div>
-            <div class="t-item"><div class="t-year">Representação</div><h3>Presidência de entidade / conselho</h3><p>Adicionar o nome correto da entidade, período e contribuição profissional.</p></div>
-            <div class="t-item"><div class="t-year">Atual</div><h3>OAB, advocacia e novos projetos</h3><p>Apresentar as frentes atuais de atuação e os próximos objetivos.</p></div>
+
+        <div class="reveal">
+
+          <div class="eyebrow">
+            Marcos da jornada
           </div>
-          <div class="portrait-card reveal"><div class="portrait-badge"><strong>Elias Júnior</strong><span>Substituir esta área pela fotografia institucional aprovada.</span></div></div>
+
+          <h2 class="section-title">
+            Uma trajetória construída com presença e responsabilidade.
+          </h2>
+
         </div>
+
+
+        <div class="timeline-wrap">
+
+
+          <!-- LINHA DO TEMPO -->
+
+          <div class="timeline reveal">
+
+
+            <div class="t-item">
+
+              <div class="t-year">
+                Início
+              </div>
+
+              <h3>
+                Ouvidor Geral de Santos
+              </h3>
+
+              <p>
+                Espaço para contextualizar a função,
+                os principais desafios e os resultados alcançados.
+              </p>
+
+            </div>
+
+
+            <div class="t-item">
+
+              <div class="t-year">
+                Gestão Pública
+              </div>
+
+              <h3>
+                Secretaria Social / Casa Pró-Saúde
+              </h3>
+
+              <p>
+                Descreva aqui a atuação de Elias em programas,
+                políticas públicas e iniciativas sociais.
+              </p>
+
+            </div>
+
+
+            <div class="t-item">
+
+              <div class="t-year">
+                Desenvolvimento
+              </div>
+
+              <h3>
+                Secretário de Assuntos Portuários
+              </h3>
+
+              <p>
+                Atuação estratégica em temas relacionados
+                ao Porto de Santos e ao desenvolvimento econômico regional.
+              </p>
+
+            </div>
+
+
+            <div class="t-item">
+
+              <div class="t-year">
+                Administração
+              </div>
+
+              <h3>
+                Fundação de Assistência
+              </h3>
+
+              <p>
+                Espaço para destacar gestão, projetos,
+                ações e impacto institucional.
+              </p>
+
+            </div>
+
+
+            <div class="t-item">
+
+              <div class="t-year">
+                Representação
+              </div>
+
+              <h3>
+                Presidência de entidade / conselho
+              </h3>
+
+              <p>
+                Adicionar o nome correto da entidade,
+                período e contribuição profissional.
+              </p>
+
+            </div>
+
+
+            <div class="t-item">
+
+              <div class="t-year">
+                Atual
+              </div>
+
+              <h3>
+                OAB, advocacia e novos projetos
+              </h3>
+
+              <p>
+                Apresentar as frentes atuais de atuação
+                e os próximos objetivos.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- FOTO -->
+
+          <div class="portrait-card reveal">
+
+            <div class="portrait-badge">
+
+              <strong>
+                Elias Júnior
+              </strong>
+
+              <span>
+                Substituir esta área pela fotografia institucional aprovada.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section class="split-feature" id="atuacao">
-      <div class="split-photo reveal">FOTO INSTITUCIONAL</div>
-      <div class="split-copy reveal"><div><div class="eyebrow">Gestão e relacionamento</div><h2 class="section-title">Humanidade e Eficiência</h2><p>Liderança pública exige escuta, responsabilidade e capacidade de transformar demandas em soluções. Esta seção pode apresentar a forma de trabalho de Elias, seus princípios e o impacto de sua atuação.</p><a href="#contato" class="gold-link">Conheça mais sobre a atuação →</a></div></div>
+
+    <!-- ATUAÇÃO -->
+
+    <section
+      class="split-feature"
+      id="atuacao"
+    >
+
+      <div class="split-photo reveal">
+        FOTO INSTITUCIONAL
+      </div>
+
+
+      <div class="split-copy reveal">
+
+        <div>
+
+          <div class="eyebrow">
+            Gestão e relacionamento
+          </div>
+
+          <h2 class="section-title">
+            Humanidade e Eficiência
+          </h2>
+
+          <p>
+            Liderança pública exige escuta, responsabilidade
+            e capacidade de transformar demandas em soluções.
+            Esta seção pode apresentar a forma de trabalho de Elias,
+            seus princípios e o impacto de sua atuação.
+          </p>
+
+          <a
+            href="#contato"
+            class="gold-link"
+          >
+            Conheça mais sobre a atuação →
+          </a>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="zpe" id="zpe">
+
+    <!-- ZPE -->
+
+    <section
+      class="zpe"
+      id="zpe"
+    >
+
       <div class="container zpe-grid">
-        <div class="zpe-copy reveal"><div class="eyebrow">Desenvolvimento econômico</div><h2 class="section-title">ZPE e Reindustrialização</h2><p>A atuação de Elias nesta frente pode ser apresentada com dados, propostas e contexto sobre desenvolvimento regional, geração de empregos, competitividade e oportunidades para Santos e Baixada Santista.</p><p><strong>O texto definitivo será inserido após a validação do assessor.</strong> O layout já está estruturado para receber uma foto vertical ou vídeo curto, exatamente como no modelo de referência.</p></div>
-        <div class="zpe-card reveal"><div class="play">▶</div><div class="zpe-note">Inserir vídeo ou foto desta pauta</div></div>
+
+
+        <div class="zpe-copy reveal">
+
+          <div class="eyebrow">
+            Desenvolvimento econômico
+          </div>
+
+          <h2 class="section-title">
+            ZPE e Reindustrialização
+          </h2>
+
+          <p>
+            A atuação de Elias nesta frente pode ser apresentada
+            com dados, propostas e contexto sobre desenvolvimento
+            regional, geração de empregos, competitividade e
+            oportunidades para Santos e Baixada Santista.
+          </p>
+
+          <p>
+            <strong>
+              O texto definitivo será inserido após a validação do assessor.
+            </strong>
+
+            O layout já está estruturado para receber uma foto vertical
+            ou vídeo curto, exatamente como no modelo de referência.
+          </p>
+
+        </div>
+
+
+        <div class="zpe-card reveal">
+
+          <div class="play">
+            ▶
+          </div>
+
+          <div class="zpe-note">
+            Inserir vídeo ou foto desta pauta
+          </div>
+
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- NÚMEROS -->
 
     <section class="stats">
+
       <div class="container stats-grid reveal">
-        <div class="stat"><strong>20+</strong><span>anos de atuação jurídica e institucional</span></div>
-        <div class="stat"><strong>125.000+</strong><span>indicador de impacto / alcance a confirmar</span></div>
-        <div class="stat"><strong>100%</strong><span>compromisso com resultados e responsabilidade</span></div>
+
+
+        <div class="stat">
+
+          <strong>
+            20+
+          </strong>
+
+          <span>
+            anos de atuação jurídica e institucional
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            125.000+
+          </strong>
+
+          <span>
+            indicador de impacto / alcance a confirmar
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            100%
+          </strong>
+
+          <span>
+            compromisso com resultados e responsabilidade
+          </span>
+
+        </div>
+
+
       </div>
+
     </section>
 
-    <section class="advocacy" id="advocacia">
+
+    <!-- ADVOCACIA -->
+
+    <section
+      class="advocacy"
+      id="advocacia"
+    >
+
       <div class="container adv-grid">
-        <div class="adv-copy reveal"><div class="eyebrow">Experiência jurídica</div><h2 class="section-title">Advocacia de Excelência</h2><p>Com mais de duas décadas de experiência, Elias reúne atuação jurídica e conhecimento da administração pública. Aqui entram as áreas do escritório, principais especialidades, formação, entidades e diferenciais profissionais.</p><p>O conteúdo poderá ser refinado após a aprovação institucional, mantendo esta estética limpa, sóbria e sofisticada.</p><div class="hero-actions" style="justify-content:flex-start;margin-top:28px"><a class="btn btn-gold" href="#contato">Solicitar contato</a></div></div>
-        <div class="adv-image reveal">FOTO PROFISSIONAL</div>
+
+
+        <div class="adv-copy reveal">
+
+          <div class="eyebrow">
+            Experiência jurídica
+          </div>
+
+          <h2 class="section-title">
+            Advocacia de Excelência
+          </h2>
+
+          <p>
+            Com mais de duas décadas de experiência,
+            Elias reúne atuação jurídica e conhecimento da
+            administração pública.
+          </p>
+
+          <p>
+            Aqui entram as áreas do escritório,
+            principais especialidades, formação,
+            entidades e diferenciais profissionais.
+          </p>
+
+          <p>
+            O conteúdo poderá ser refinado após a aprovação
+            institucional, mantendo esta estética limpa,
+            sóbria e sofisticada.
+          </p>
+
+          <div class="hero-actions hero-actions-left">
+
+            <a
+              class="btn btn-gold"
+              href="#contato"
+            >
+              Solicitar contato
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="adv-image reveal">
+          FOTO PROFISSIONAL
+        </div>
+
+
       </div>
+
     </section>
 
-    <section class="cta" id="contato">
-      <div class="container reveal"><div class="eyebrow">Contato</div><h2>Experiência para construir soluções que geram impacto.</h2><p>Área destinada aos canais oficiais de contato, redes sociais, WhatsApp, e-mail e informações institucionais.</p><div class="hero-actions"><a class="btn btn-gold" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar pelo WhatsApp</a><a class="btn btn-outline" href="mailto:contato@exemplo.com">Enviar e-mail</a></div></div>
+
+    <!-- CONTATO -->
+
+    <section
+      class="cta"
+      id="contato"
+    >
+
+      <div class="container reveal">
+
+        <div class="eyebrow">
+          Contato
+        </div>
+
+        <h2>
+          Experiência para construir soluções que geram impacto.
+        </h2>
+
+        <p>
+          Área destinada aos canais oficiais de contato,
+          redes sociais, WhatsApp, e-mail e informações institucionais.
+        </p>
+
+        <div class="hero-actions">
+
+
+          <!-- TROCAR PELO NÚMERO REAL -->
+
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/5500000000000"
+            target="_blank"
+            rel="noopener"
+          >
+            Falar pelo WhatsApp
+          </a>
+
+
+          <!-- TROCAR PELO EMAIL REAL -->
+
+          <a
+            class="btn btn-outline"
+            href="mailto:contato@exemplo.com"
+          >
+            Enviar e-mail
+          </a>
+
+
+        </div>
+
+      </div>
+
     </section>
+
+
   </main>
 
-  <footer><div class="container"><div class="footer-top"><div><div class="footer-brand">Elias Júnior</div><div class="footer-muted">Advocacia • Gestão Pública • Desenvolvimento</div></div><div class="footer-links"><a href="#inicio">Início</a><a href="#trajetoria">Trajetória</a><a href="#zpe">ZPE</a><a href="#advocacia">Advocacia</a><a href="#contato">Contato</a></div></div><div class="copyright">© 2026 Elias Júnior. Layout demonstrativo para aprovação institucional.</div></div></footer>
 
-  <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-  <script>
-    const nav=document.getElementById('nav');
-    const menu=document.getElementById('menu');
-    const mobileToggle=document.getElementById('mobileToggle');
-    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
-    mobileToggle.addEventListener('click',()=>menu.classList.toggle('open'));
-    document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-    const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-    setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classList.add('visible')),120);
-  </script>
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-top">
+
+
+        <div>
+
+          <div class="footer-brand">
+            Elias Júnior
+          </div>
+
+          <div class="footer-muted">
+            Advocacia • Gestão Pública • Desenvolvimento
+          </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <a href="#inicio">
+            Início
+          </a>
+
+          <a href="#trajetoria">
+            Trajetória
+          </a>
+
+          <a href="#zpe">
+            ZPE
+          </a>
+
+          <a href="#advocacia">
+            Advocacia
+          </a>
+
+          <a href="#contato">
+            Contato
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 Elias Júnior.
+        Layout demonstrativo para aprovação institucional.
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       WHATSAPP FLUTUANTE
+  ========================== -->
+
+  <!-- TROCAR PELO NÚMERO REAL -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/5500000000000"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+  >
+    WA
+  </a>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script
+    src="script.js"
+    defer
+  ></script>
+
+
 </body>
 </html>
