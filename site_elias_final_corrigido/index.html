@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acervo institucional de Elias Júnior: trajetória, atuação, notícias, documentos e registros em imagens.">
+  <title>Elias Júnior | Trajetória e Acervo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fa-solid fa-location-dot"></i> Santos • São Paulo</span>
+      <div class="topbar-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Elias Júnior">
+        <span class="brand-main">ELIAS</span><span class="brand-sub">JÚNIOR</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#inicio">HOME</a><a href="#sobre">ELIAS</a><a href="#trajetoria">TRAJETÓRIA</a>
+        <a href="#atuacao">ATUAÇÃO</a><a href="#noticias">NOTÍCIAS</a><a href="#acervo">ACERVO</a>
+        <a href="#transparencia">DOCUMENTOS</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#inicio">Home</a><a href="#sobre">Elias</a><a href="#trajetoria">Trajetória</a><a href="#atuacao">Atuação</a><a href="#noticias">Notícias</a><a href="#acervo">Acervo</a><a href="#transparencia">Documentos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-slider" id="heroSlider">
+        <article class="hero-slide active" style="--bg:url('assets/hero-1.jpg')">
+          <div class="hero-fallback"></div><div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <span class="eyebrow">TRAJETÓRIA • GESTÃO • DESENVOLVIMENTO</span>
+            <h1>Uma história conectada a <strong>Santos.</strong></h1>
+            <p>Direito, associativismo, juventude, porto, desenvolvimento social e gestão pública em uma trajetória construída com participação e resultados.</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="#trajetoria">Conheça a trajetória</a><a class="btn btn-outline" href="#acervo">Explore o acervo</a></div>
+          </div>
+        </article>
+        <article class="hero-slide" style="--bg:url('assets/hero-2.jpg')">
+          <div class="hero-fallback alternate"></div><div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <span class="eyebrow">PORTO & INDÚSTRIA</span><h1>Santos, infraestrutura e <strong>futuro.</strong></h1>
+            <p>Atuação ligada ao desenvolvimento portuário, à indústria, à infraestrutura e à integração entre oportunidades econômicas e políticas públicas.</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="#atuacao">Ver áreas de atuação</a></div>
+          </div>
+        </article>
+        <article class="hero-slide" style="--bg:url('assets/hero-3.jpg')">
+          <div class="hero-fallback third"></div><div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <span class="eyebrow">MEMÓRIA & TRANSPARÊNCIA</span><h1>Um acervo para preservar <strong>histórias.</strong></h1>
+            <p>Fotos, vídeos, artigos, entrevistas e documentos reunidos em um ambiente digital organizado por temas e momentos da trajetória.</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="#acervo">Acessar acervo</a><a class="btn btn-outline" href="#transparencia">Ver documentos</a></div>
+          </div>
+        </article>
+      </div>
+      <button class="slider-arrow prev" id="heroPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-arrow next" id="heroNext"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="slider-dots" id="heroDots"><button class="active"></button><button></button><button></button></div>
+    </section>
+
+    <section class="quick-access">
+      <div class="container quick-grid">
+        <a class="quick-card quick-dark" href="#trajetoria"><div class="quick-icon"><i class="fa-solid fa-user-tie"></i></div><span>CONHEÇA</span><h2>A trajetória</h2><p>Biografia, formação, cargos, instituições e principais marcos.</p><strong>CLIQUE AQUI <i class="fa-solid fa-arrow-right"></i></strong></a>
+        <a class="quick-card quick-accent" href="#acervo"><div class="quick-icon"><i class="fa-regular fa-images"></i></div><span>EXPLORE</span><h2>O acervo</h2><p>Fotografias, vídeos, entrevistas, artigos e documentos históricos.</p><strong>CLIQUE AQUI <i class="fa-solid fa-arrow-right"></i></strong></a>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="container about-grid">
+        <div class="about-media"><div class="photo-slot portrait has-image" data-label="FOTO DO ELIAS" style="background-image:url('assets/elias-sobre.jpg')"></div><div class="about-badge"><strong>SANTOS</strong><span>trajetória conectada à cidade</span></div></div>
+        <div class="about-copy"><span class="section-kicker">QUEM É ELIAS JÚNIOR</span><h2>Uma trajetória construída entre <em>técnica, liderança e gestão.</em></h2><p>Elias Francisco da Silva Júnior é advogado e gestor público santista, com trajetória ligada ao Direito, ao associativismo, à formação profissional, ao setor produtivo e à administração pública.</p><p>Sua experiência reúne atuação no CAMPS Santos, FIESP, CIESP, Instituto Brasileiro de Infraestrutura e em áreas estratégicas da Prefeitura de Santos.</p><div class="about-links"><a href="#trajetoria"><i class="fa-solid fa-clock-rotate-left"></i><span><strong>Linha do tempo</strong>Conheça os principais marcos</span></a><a href="#atuacao"><i class="fa-solid fa-compass"></i><span><strong>Áreas de atuação</strong>Veja os principais eixos</span></a></div></div>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="trajetoria"><div class="container"><div class="title-row"><div><span class="section-kicker light">TRAJETÓRIA</span><h2 class="light-title">Marcos de uma história em movimento.</h2></div><p>Uma linha do tempo que poderá receber fotos específicas de cada período.</p></div><div class="timeline-horizontal">
+      <article><span>1983</span><h3>Nascimento em Santos</h3><p>Origem e vínculo com a Baixada Santista.</p></article><article><span>2005</span><h3>Formação em Direito</h3><p>Graduação pela Universidade Católica de Santos.</p></article><article><span>2012</span><h3>Rotary</h3><p>Presidência do Rotary Club Santos José Bonifácio.</p></article><article><span>2016–2020</span><h3>CAMPS Santos</h3><p>Presidência e atuação em formação profissional e juventude.</p></article><article><span>2018</span><h3>FIESP</h3><p>Atuação no Conselho Superior de Relações do Trabalho.</p></article><article><span>2022</span><h3>CIESP</h3><p>Participação na Diretoria Estadual.</p></article><article><span>2023</span><h3>IBI</h3><p>Fundação do Instituto Brasileiro de Infraestrutura.</p></article><article><span>2024</span><h3>Assuntos Portuários</h3><p>Secretaria de Assuntos Portuários e Emprego de Santos.</p></article><article><span>2025</span><h3>Desenvolvimento Social</h3><p>Nova etapa na gestão pública municipal.</p></article><article><span>2025–Atual</span><h3>Ouvidoria, Controle, Transparência e ODS</h3><p>Governança, dados, controle e Agenda 2030.</p></article>
+    </div></div></section>
+
+    <section class="section areas" id="atuacao"><div class="container"><div class="section-heading centered"><span class="section-kicker">EIXOS DE ATUAÇÃO</span><h2>Experiência em diferentes frentes.</h2><p>Os conteúdos podem ser ampliados e transformados em páginas internas depois.</p></div><div class="area-grid">
+      <article class="area-card"><i class="fa-solid fa-ship"></i><span>01</span><h3>Porto & Indústria</h3><p>ZPE, infraestrutura, integração Porto-Cidade, FIESP, CIESP e desenvolvimento econômico.</p><a href="#destaque">SAIBA MAIS <i class="fa-solid fa-arrow-right"></i></a></article>
+      <article class="area-card"><i class="fa-solid fa-people-group"></i><span>02</span><h3>Juventude & Educação</h3><p>CAMPS Santos, formação profissional, CapacitaCE e associativismo jovem.</p><a href="#acervo">SAIBA MAIS <i class="fa-solid fa-arrow-right"></i></a></article>
+      <article class="area-card"><i class="fa-solid fa-hand-holding-heart"></i><span>03</span><h3>Desenvolvimento Social</h3><p>Políticas sociais, reinserção profissional, cidadania e articulação regional.</p><a href="#noticias">SAIBA MAIS <i class="fa-solid fa-arrow-right"></i></a></article>
+      <article class="area-card"><i class="fa-solid fa-chart-pie"></i><span>04</span><h3>Transparência & ODS</h3><p>Ouvidoria, indicadores, controle, transparência, dados e Agenda 2030.</p><a href="#transparencia">SAIBA MAIS <i class="fa-solid fa-arrow-right"></i></a></article>
+    </div></div></section>
+
+    <section class="feature-banner" id="destaque"><div class="feature-photo"><div class="photo-slot wide dark-slot has-image" data-label="FOTO PORTO / EVENTO" style="background-image:url('assets/destaque-porto.jpg')"></div></div><div class="feature-copy"><span class="section-kicker light">PORTO & DESENVOLVIMENTO</span><h2>Santos, porto, indústria e oportunidades.</h2><p>Espaço de destaque para projetos, discursos, artigos e ações relacionados à infraestrutura, ZPE, desenvolvimento econômico e integração Porto-Cidade.</p><a href="#acervo" class="btn btn-light">VER REGISTROS</a></div></section>
+
+    <section class="section news" id="noticias"><div class="container"><div class="title-row dark-row"><div><span class="section-kicker">ATUALIZAÇÕES</span><h2>Notícias e atividades</h2></div><a href="#" class="section-link">VER TODAS <i class="fa-solid fa-arrow-right"></i></a></div><div class="news-grid">
+      <article class="news-card"><div class="photo-slot news-photo has-image" style="background-image:url('assets/noticia-1.jpg')"></div><div class="news-body"><span class="news-date">DATA DA PUBLICAÇÃO</span><h3>Título da notícia ou atividade em destaque</h3><p>Inclua aqui um resumo curto. A foto do documento correspondente pode ser usada nesta posição.</p><a href="#">LEIA MAIS <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="news-card"><div class="photo-slot news-photo has-image" style="background-image:url('assets/noticia-2.jpg')"></div><div class="news-body"><span class="news-date">DATA DA PUBLICAÇÃO</span><h3>Segundo registro da trajetória de Elias Júnior</h3><p>Ideal para eventos, visitas institucionais, agendas, homenagens e projetos.</p><a href="#">LEIA MAIS <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="news-card"><div class="photo-slot news-photo has-image" style="background-image:url('assets/noticia-3.jpg')"></div><div class="news-body"><span class="news-date">DATA DA PUBLICAÇÃO</span><h3>Terceira notícia ou publicação institucional</h3><p>O conteúdo pode posteriormente receber uma página própria com galeria e documentos.</p><a href="#">LEIA MAIS <i class="fa-solid fa-arrow-right"></i></a></div></article>
+    </div></div></section>
+
+    <section class="section archive" id="acervo"><div class="container"><div class="section-heading centered"><span class="section-kicker light">ACERVO DIGITAL</span><h2 class="light-title">Uma trajetória registrada em imagens.</h2><p class="light-text">Os botões já estão preparados para organizar fotos por assunto.</p></div><div class="archive-filters" id="archiveFilters"><button class="active" data-filter="all">TODOS</button><button data-filter="porto">PORTO</button><button data-filter="camps">CAMPS</button><button data-filter="social">SOCIAL</button><button data-filter="gestao">GESTÃO</button></div><div class="archive-grid">
+      <button class="archive-item large" data-category="porto" data-image="assets/acervo-1.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/acervo-1.jpg')"></div><div class="archive-caption"><strong>Porto & Indústria</strong><small>Adicionar data e evento</small></div></button>
+      <button class="archive-item" data-category="camps" data-image="assets/acervo-2.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/acervo-2.jpg')"></div><div class="archive-caption"><strong>CAMPS Santos</strong><small>Adicionar data e evento</small></div></button>
+      <button class="archive-item" data-category="social" data-image="assets/acervo-3.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/acervo-3.jpg')"></div><div class="archive-caption"><strong>Desenvolvimento Social</strong><small>Adicionar data e evento</small></div></button>
+      <button class="archive-item" data-category="gestao" data-image="assets/acervo-4.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/acervo-4.jpg')"></div><div class="archive-caption"><strong>Gestão Pública</strong><small>Adicionar data e evento</small></div></button>
+      <button class="archive-item" data-category="porto" data-image="assets/acervo-5.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/acervo-5.jpg')"></div><div class="archive-caption"><strong>Infraestrutura</strong><small>Adicionar data e evento</small></div></button>
+    </div></div></section>
+
+    <section class="section videos"><div class="container"><div class="title-row dark-row"><div><span class="section-kicker">VÍDEOS</span><h2>Entrevistas e registros</h2></div></div><div class="video-grid">
+      <article class="video-card"><div class="video-thumb photo-slot"><button><i class="fa-solid fa-play"></i></button><span>CAPA DO VÍDEO 01</span></div><h3>Entrevista / discurso / participação</h3></article>
+      <article class="video-card"><div class="video-thumb photo-slot"><button><i class="fa-solid fa-play"></i></button><span>CAPA DO VÍDEO 02</span></div><h3>Registro institucional / evento</h3></article>
+      <article class="video-card"><div class="video-thumb photo-slot"><button><i class="fa-solid fa-play"></i></button><span>CAPA DO VÍDEO 03</span></div><h3>Entrevista / conteúdo histórico</h3></article>
+    </div></div></section>
+
+    <section class="stats"><div class="container stats-grid"><div><strong data-counter="125000">0</strong><span>JOVENS • REFERÊNCIA CAMPS</span></div><div><strong data-counter="33000">0</strong><span>OCORRÊNCIAS • OUVIDORIA 2025</span></div><div><strong data-counter="4">0</strong><span>EIXOS PRINCIPAIS DO ACERVO</span></div><div><strong data-counter="10">0</strong><span>MARCOS NA LINHA DO TEMPO</span></div></div></section>
+
+    <section class="section documents" id="transparencia"><div class="container documents-grid"><div><span class="section-kicker">TRANSPARÊNCIA & MEMÓRIA</span><h2>Documentos organizados para consulta.</h2><p>Área preparada para receber nomeações, Diários Oficiais, relatórios, estudos, artigos, discursos e outros arquivos em PDF.</p><a href="#" class="btn btn-dark">VER TODOS OS DOCUMENTOS</a></div><div class="document-list">
+      <a href="#"><i class="fa-regular fa-file-pdf"></i><span><strong>Nomeações</strong><small>Diários Oficiais e registros funcionais</small></span><i class="fa-solid fa-arrow-right"></i></a><a href="#"><i class="fa-regular fa-file-lines"></i><span><strong>Artigos e Opinião</strong><small>Publicações e produção intelectual</small></span><i class="fa-solid fa-arrow-right"></i></a><a href="#"><i class="fa-solid fa-microphone-lines"></i><span><strong>Discursos</strong><small>Pronunciamentos e eventos</small></span><i class="fa-solid fa-arrow-right"></i></a><a href="#"><i class="fa-solid fa-chart-column"></i><span><strong>Relatórios e estudos</strong><small>Materiais técnicos e institucionais</small></span><i class="fa-solid fa-arrow-right"></i></a>
+    </div></div></section>
+
+    <section class="section institutions"><div class="container"><div class="section-heading centered compact"><span class="section-kicker">TRAJETÓRIA INSTITUCIONAL</span><h2>Instituições que fazem parte da história.</h2></div><div class="logo-strip"><div>CAMPS</div><div>FIESP</div><div>CIESP</div><div>IBI</div><div>ROTARY</div><div>PREFEITURA<br>DE SANTOS</div></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-grid"><div><a href="#inicio" class="brand footer-brand"><span class="brand-main">ELIAS</span><span class="brand-sub">JÚNIOR</span></a><p>Trajetória, memória, gestão e desenvolvimento.</p><div class="footer-social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div><div><h3>NAVEGAÇÃO</h3><a href="#sobre">Quem é Elias</a><a href="#trajetoria">Trajetória</a><a href="#atuacao">Atuação</a><a href="#noticias">Notícias</a></div><div><h3>ACERVO</h3><a href="#acervo">Fotografias</a><a href="#transparencia">Documentos</a><a href="#transparencia">Artigos</a><a href="#transparencia">Discursos</a></div><div><h3>CONTATO</h3><p>Santos • São Paulo</p><a href="mailto:contato@eliasjunior.com.br">contato@eliasjunior.com.br</a></div></div><div class="footer-bottom"><div class="container">© 2026 Elias Júnior • Site demonstrativo para aprovação.</div></div></footer>
+  <button class="back-top" id="backTop"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button><div class="lightbox-content"><div class="lightbox-image" id="lightboxImage">A FOTO APARECERÁ AQUI QUANDO O ARQUIVO FOR INSERIDO.</div></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
