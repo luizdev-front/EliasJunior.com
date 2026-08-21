@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acervo digital de fotografias e registros da trajetória de Elias Júnior.">
+  <title>Acervo | Elias Júnior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=20260821-paginas-internas">
+</head>
+<body class="internal-page">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fa-solid fa-location-dot"></i> Santos • São Paulo</span>
+      <div class="topbar-social">
+        <a href="https://www.instagram.com/soueliasjunior?igsh=bm9hNml6cGlpMXU1" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/elias-júnior-178a2b65" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html#inicio" class="brand" aria-label="Elias Júnior">
+        <span class="brand-main">ELIAS</span><span class="brand-sub">JÚNIOR</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="index.html#inicio">HOME</a><a href="index.html#sobre">ELIAS</a><a href="index.html#trajetoria">TRAJETÓRIA</a>
+        <a href="index.html#atuacao">ATUAÇÃO</a><a href="noticias.html">NOTÍCIAS</a><a class="active" href="acervo.html">ACERVO</a>
+        <a href="index.html#transparencia">DOCUMENTOS</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html#inicio">Home</a><a href="index.html#sobre">Elias</a><a href="index.html#trajetoria">Trajetória</a><a href="index.html#atuacao">Atuação</a><a href="noticias.html">Notícias</a><a class="active" href="acervo.html">Acervo</a><a href="index.html#transparencia">Documentos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="internal-hero">
+      <div class="container">
+        <span class="section-kicker light">MEMÓRIA & TRAJETÓRIA</span>
+        <h1>Um acervo para preservar histórias.</h1>
+        <p>Fotografias e registros organizados por temas para documentar momentos importantes da trajetória de Elias Júnior.</p>
+      </div>
+    </section>
+
+    <section class="section archive archive-page">
+      <div class="container">
+        <div class="section-heading centered"><span class="section-kicker light">ACERVO DIGITAL</span><h2 class="light-title">Registros em imagens.</h2><p class="light-text">Selecione uma categoria para explorar o conteúdo. Novas fotografias e informações poderão ser adicionadas a qualquer momento.</p></div>
+        <div class="archive-filters" id="archiveFilters"><button class="active" data-filter="all">TODOS</button><button data-filter="feitos">FEITOS</button><button data-filter="camps">CAMPS</button><button data-filter="porto">PORTO</button><button data-filter="social">SOCIAL</button><button data-filter="ouvidoria">OUVIDORIA</button></div>
+        <div class="archive-grid archive-page-grid">
+          <button class="archive-item" data-category="porto" data-image="fotoporto.JPG"><div class="photo-slot archive-photo has-image" style="background-image:url('fotoporto.JPG')"></div><div class="archive-caption"><strong>Porto & Indústria</strong><small>Desenvolvimento econômico e integração Porto-Cidade.</small></div></button>
+          <button class="archive-item" data-category="camps" data-image="fotocamps.jpeg"><div class="photo-slot archive-photo has-image" style="background-image:url('fotocamps.jpeg')"></div><div class="archive-caption"><strong>CAMPS Santos</strong><small>Formação de jovens e criação de oportunidades.</small></div></button>
+          <button class="archive-item" data-category="social" data-image="fotosocial.jpeg"><div class="photo-slot archive-photo has-image" style="background-image:url('fotosocial.jpeg');background-position:center 15%"></div><div class="archive-caption"><strong>Desenvolvimento Social</strong><small>Iniciativas que acolhem, protegem e transformam vidas.</small></div></button>
+          <button class="archive-item" data-category="ouvidoria" data-image="assets/hero-atual-3.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/hero-atual-3.jpg')"></div><div class="archive-caption"><strong>Ouvidoria</strong><small>Transparência e melhoria dos serviços municipais.</small></div></button>
+          <button class="archive-item" data-category="feitos" data-image="assets/elias-sobre.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/elias-sobre.jpg')"></div><div class="archive-caption"><strong>Trajetória</strong><small>Momentos e realizações ao longo de sua história.</small></div></button>
+          <button class="archive-item" data-category="porto" data-image="assets/destaque-porto.jpg"><div class="photo-slot archive-photo has-image" style="background-image:url('assets/destaque-porto.jpg')"></div><div class="archive-caption"><strong>Santos & Desenvolvimento</strong><small>Projetos e ações ligados ao futuro da cidade.</small></div></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-grid"><div><a href="index.html#inicio" class="brand footer-brand"><span class="brand-main">ELIAS</span><span class="brand-sub">JÚNIOR</span></a><p>Trajetória, memória, gestão e desenvolvimento.</p></div><div><h3>NAVEGAÇÃO</h3><a href="index.html#sobre">Quem é Elias</a><a href="index.html#trajetoria">Trajetória</a><a href="index.html#atuacao">Atuação</a><a href="noticias.html">Notícias</a></div><div><h3>ACERVO</h3><a href="acervo.html">Fotografias</a><a href="index.html#transparencia">Documentos</a><a href="index.html#transparencia">Artigos</a><a href="index.html#transparencia">Discursos</a></div><div><h3>CONTATO</h3><p>Santos • São Paulo</p><a href="mailto:contato@eliasjunior.com.br">contato@eliasjunior.com.br</a></div></div><div class="footer-bottom"><div class="container">© 2026 Elias Júnior • Site demonstrativo para aprovação.</div></div></footer>
+  <button class="back-top" id="backTop" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Fechar imagem"><i class="fa-solid fa-xmark"></i></button><div class="lightbox-content"><div class="lightbox-image" id="lightboxImage"></div></div></div>
+  <script src="script.js?v=20260821-paginas-internas"></script>
+</body>
+</html>
